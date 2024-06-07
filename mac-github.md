@@ -38,5 +38,4 @@ ssh -T git@github.com
 
 # 如果报错"Host key verification failed."
 你可以手动使用 ssh-keygen 命令来验证远程服务器的 host key。例如，对于 GitHub，你可以运行：
-
-ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+```ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
