@@ -29,7 +29,7 @@ pbcopy < ~/.ssh/id_rsa.pub
 
  在终端中输入以下命令：
 
-ssh -T git@github.com
+```ssh -T git@github.com
  如果一切设置正确，你应该会看到一条消息，说你已经成功地认证了。
 
 现在，当你从 GitHub 克隆或推送代码时，会使用这个 SSH key。这样，你就不需要每次都输入用户名和密码了。
