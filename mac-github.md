@@ -29,13 +29,16 @@ pbcopy < ~/.ssh/id_rsa.pub
 
  在终端中输入以下命令：
 
-```ssh -T git@github.com
+```ssh-config
+ssh -T git@github.com
+```
  如果一切设置正确，你应该会看到一条消息，说你已经成功地认证了。
 
 现在，当你从 GitHub 克隆或推送代码时，会使用这个 SSH key。这样，你就不需要每次都输入用户名和密码了。
 
 
-
 # 如果报错"Host key verification failed."
 你可以手动使用 ssh-keygen 命令来验证远程服务器的 host key。例如，对于 GitHub，你可以运行：
-```ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+```ssh-config
+ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
+```
