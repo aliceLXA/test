@@ -11,9 +11,12 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 # 添加 SSH Key 到 ssh-agent：
 
  首先，确保 ssh-agent 在后台运行：
-
+ 
+```ssh-config
 eval "$(ssh-agent -s)"
+```
  然后添加 SSH private key 到 ssh-agent：
+
 ```ssh-config
 ssh-add -K ~/.ssh/id_rsa
 ```
