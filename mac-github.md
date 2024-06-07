@@ -14,13 +14,15 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 eval "$(ssh-agent -s)"
  然后添加 SSH private key 到 ssh-agent：
-
+```ssh-config
 ssh-add -K ~/.ssh/id_rsa
+```
 将 SSH Key 添加到 GitHub：
 
 # 复制 SSH key 到剪贴板：
-
+```ssh-config
 pbcopy < ~/.ssh/id_rsa.pub
+```
 登录到你的 GitHub 账户，进入 “设置（Settings）” -> “SSH 和 GPG 密钥（SSH and GPG keys）”。
 
 点击 “新建 SSH 密钥（New SSH key）”，然后粘贴你复制的公钥。
