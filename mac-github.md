@@ -4,8 +4,9 @@
 # 生成 SSH Key：
 
  打开“终端”应用程序，然后输入以下命令：
-
+```ssh-config
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
  这将在 ~/.ssh/ 目录下生成一个新的 SSH key。
 
 # 添加 SSH Key 到 ssh-agent：
